@@ -4,8 +4,6 @@ services:
     container_name: openwebui-docker-sandbox
     ports:
       - "8080:8080"
-    volumes:
-      - open-webui:/app/backend/data
-
-volumes:
-  open-webui:
+    env_file:
+      - .env
+      - .env.local

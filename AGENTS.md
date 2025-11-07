@@ -2,10 +2,10 @@
 
 This repository is an experiment with Open WebUI and Docker to use Scaleway serverless infrastructure.
 
-At the moment I am trying to create a sample/example Dockerfile to run Open WebUI with a remote database (through environment variables) that is hosted on Scaleway serverless DB service. My idea is to test this sample Dockerfile locally and then try to move it to Scaleway managed container service and possibly have a serverless service to run Open WebUI.
+I have created a `docker-compose.yml` file and several helper scripts on `package.json` that allow me to mimic the serverless nature of Scaleway Serverless Containers service (when restarting the container all the volumes are dropped, etc).
 
-Open WebUI will also need information about the models, and I also expect to use a serverless inference service (with an OpenAI compatible API) from Nscale.
+The `docker-compose.yml` relies on `.env` files to set up the necessary ENV variables to make it work with stateless Scaleway Serverless Container service, and persist the necessary data on external services thus making the actual container truly serverless and transient.
 
-## Additional context for current `dockerfile` branch
+I tested it on the Serverless Container service, by mimicking the config and environment variables and it works as expected.
 
-I am putting up the Dockerfile, but Docker Compose is more convenient, so I will only need a `docker-compose.yml` and won't need a `Dockerfile` for now.
+I also used the serverless inference service (with an OpenAI compatible API) from Nscale, which also worked as expected.
