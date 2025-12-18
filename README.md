@@ -1,5 +1,5 @@
 
-# openwebui-docker-sandbox
+# openwebui-docker-serverless
 
 An experiment with Open WebUI and Docker to use Scaleway serverless infrastructure.
 

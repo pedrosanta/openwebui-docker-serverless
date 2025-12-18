@@ -1,5 +1,5 @@
 {
-  "name": "openwebui-docker-sandbox",
+  "name": "openwebui-docker-serverless",
   "private": true,
   "scripts": {
     "start": "docker compose up",
