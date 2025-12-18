@@ -1,0 +1,9 @@
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:v0.6.41
+    container_name: openwebui-docker-sandbox
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+      - .env.local

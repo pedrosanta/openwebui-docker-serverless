@@ -1,0 +1,11 @@
+{
+  "name": "openwebui-docker-sandbox",
+  "private": true,
+  "scripts": {
+    "start": "docker compose up",
+    "start:fresh": "docker compose up --force-recreate --renew-anon-volumes",
+    "stop": "docker compose down",
+    "clean": "docker compose down --volumes --remove-orphans",
+    "restart": "npm run clean && npm run start:fresh"
+  }
+}
